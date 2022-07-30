@@ -1,6 +1,7 @@
 // Imports
 import '../styles/App.css';
 import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // entrada App
 export default function App() {
