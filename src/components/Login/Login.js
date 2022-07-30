@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import greeni from '../../assets/images/greeni.png';
 
+// vista login
 export default function Login() {
 
   // navigate para cambio de ruta
