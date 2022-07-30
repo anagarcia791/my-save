@@ -1,10 +1,13 @@
 // Imports
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
+import { useAuth } from '../../Context/authContext';
 import { useNavigate } from 'react-router-dom';
 import greeni from '../../assets/images/greeni.png';
 
 // vista sigin
 export default function Signin() {
+
+  const {signup} = useAuth();
 
   // declaracion de navigate para cambio de ruta
   const navigate = useNavigate();
@@ -16,24 +19,26 @@ export default function Signin() {
   const [user, setUser]= useState({
     email:'',
     password:'',
-    confirmPassword: '',
   });
 
   // funcion para captura de cambio en inputs
   const handleChange = ({target: {name, value}}) => {
     setUser({...user, [name]:value})
-  }
+  };
 
   // funcion para registrar usuario
-  const handleSignIn = ()=>{
-    console.log(user);
-    navigate('/home', { replace: true });
-  }
-
-  // funcion para validacion de contraseñas iguales
-  const passwordValidator = (e)=>{
+  const handleSignIn = async(e)=>{
     e.preventDefault();
-    user.password === user.confirmPassword ? handleSignIn() : setError('¡Ups! por favor vuelve a intentarlo')
+    try{
+      await signup(user.email, user.password)
+      navigate('/home', { replace: true });
+    }catch(error){
+      if (error.code === 'auth/weak-password'){
+        setError('La contraseña no tiene 6 caracteres')
+      }else{
+        setError('error al registrar usuario');
+      }
+    }
   }
 
   // hook para cambio en mensaje de error
@@ -52,7 +57,7 @@ export default function Signin() {
 
   return (
     <>
-      <form className='form' onSubmit={passwordValidator}>
+      <form className='form' onSubmit={handleSignIn}>
         <img className='form__logo' src={ greeni } alt='greeni-logo'/>
 
         <input
@@ -67,13 +72,6 @@ export default function Signin() {
           type='password'
           name='password'
           placeholder='Contraseña'
-          onChange={handleChange}
-        ></input>
-        
-        <input
-          type='password'
-          name='confirmPassword'
-          placeholder='Confirmar contraseña'
           onChange={handleChange}
         ></input>
         
