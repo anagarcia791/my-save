@@ -1,4 +1,4 @@
-import greeni from '../../assets/images/greeni.png';
+import hoja from '../../assets/images/hoja.png';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import { useAuth } from '../../Context/authContext'
@@ -12,7 +12,7 @@ export default function NavBar() {
   return (
     <>
       <Navbar expand='sm' className='general-nav'>
-        <img className='general-nav-img' src={ greeni } alt='greeni-logo'/>
+        <img className='general-nav-img' src={ hoja } alt='hoja'/>
         <Navbar.Toggle
           aria-controls='basic-navbar-nav'
           className='general-nav-toggle'
