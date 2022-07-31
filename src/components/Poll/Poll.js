@@ -110,6 +110,7 @@ export default function Poll() {
             {/* <span>Contador de buenas acciones {countGoodAction}</span> */}
             <div className="questions">
             <p>{currentQuestion.question}</p>
+            <p className="question-p">{currentQuestion.informacion}</p>
             </div>
             <div className="buttons__answers">
             <button className="buttons__answers--si" onClick={() => questionAnswered(true)}>Si</button>                      

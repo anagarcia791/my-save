@@ -26,6 +26,11 @@
 
 }
 
+.question-p{
+  font-weight: normal;
+  font-size: 20px;
+}
+
 .buttons__answers{  
   display: flex;
   flex-direction: column;
@@ -35,7 +40,7 @@
 }
 .buttons__answers--si,
 .buttons__answers--no {
-  padding: 6px 11px 6px 11px;
+  padding: 3px 8px 3px 8px;
   border-radius: 7px;
   color: #FFF5F5;
   background-color: #A83979;

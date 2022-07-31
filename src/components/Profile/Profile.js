@@ -55,7 +55,7 @@ export default function Profile() {
     <>
     <NavBar/>
     <div className="infoUsuario">
-      <h1 className="info__user">Tu Correo: {user.email}</h1>
+      <h1 className="info__user">Tu correo: {user.email}</h1>
       <ConsumerType/>   
       <img className="img__result" src={photo} alt='idolotraidor'/>   
     </div>

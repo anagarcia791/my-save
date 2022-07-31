@@ -3,52 +3,62 @@
         {
             "id": 1,
             "question": "¿Tus duchas tardan más de 5 minutos?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "En promedio, se consumen 200 litros de agua durante una ducha de 10 minutos."
         },
         {
             "id": 2,
             "question": "¿Usas bolsas de tela cuando vas a hacer compras?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Una bolsa de tela equivale a 1,000 bolsas de plástico menos."
         },
         {
             "id": 3,
             "question": "¿Compras frutas y verduras de temporada?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "No se fuerza la produccion y no se usan fetilizantes."
         },
         {
             "id": 4,
             "question": "¿Usas bombillas de consumo de baja energía?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Consumen menos electricidad para producir la misma cantidad de luz."
         },
         {
             "id": 5,
             "question": "¿Cuando compras tus alimentos escoges alimentos locales?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Se reduce los niveles de emisiones causadas por los largos recorridos."
         },
         {
             "id": 6,
             "question": "¿Separas tus residuos?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Las materias primas se pueden recuperar al clasificarlos antes de tirarlos, estos materiales pueden ser reciclados."
         },
         {
             "id": 7,
             "question": "¿Compras comida orgánica?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Su proceso de produccion esta libre de plaguicidas, fertilizantes quimicos."
         },
         {
             "id": 8,
             "question": "¿Utilizas la bici o caminas cuando vas a lugares cercanos?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Con esto no consumes combustibles, no emite gases de efecto invernadero."
         },
         {
             "id": 9,
             "question": "¿Cierras el grifo mientras te cepillas los dientes?",
-            "respuesta": 0
+            "respuesta": 0,
+            "informacion": "Si cierras el grifo mientras te cepillas los dientes, ahorrarás 12 litros/minuto."
         },
         {
             "id": 10,
-            "question": "¿Tienes baños ahorradores en casa?",
-            "respuesta": 0
+            "question": "¿Prendes las luces de tu hogar en el día?",
+            "respuesta": 0,
+            "informacion": "El uso eficiente de energia ayuda a reducir impactos ambientales."
         }
     ]
 }
