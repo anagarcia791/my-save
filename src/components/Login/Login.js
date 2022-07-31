@@ -34,9 +34,9 @@ export default function Login() {
       navigate('/home', { replace: true })
     }catch(error){
       if (error.code === 'auth/user-not-found'){
-        setError('usuario no registrado');
+        setError('Usuario no registrado');
       }else{
-        setError('error al iniciar sesión');
+        setError('Error al iniciar sesión');
       }
     }
   }
@@ -46,7 +46,7 @@ export default function Login() {
     if (error) {
       setTimeout(() => {
         setError('');
-      }, 1500);
+      }, 2000);
     }
   }, [error]);
   
@@ -79,7 +79,6 @@ export default function Login() {
 
         {error && <span className='form__error-msg'>{error}</span>}
 
-        <hr/>
       </form>
       <section className = 'log-sig-load'>
         <p>¿No tienes cuenta?</p>

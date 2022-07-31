@@ -36,7 +36,7 @@ export default function Signin() {
       if (error.code === 'auth/weak-password'){
         setError('La contraseña no tiene 6 caracteres')
       }else{
-        setError('error al registrar usuario');
+        setError('Error al registrar usuario');
       }
     }
   }
@@ -46,7 +46,7 @@ export default function Signin() {
     if (error) {
       setTimeout(() => {
         setError('');
-      }, 1500);
+      }, 2000);
     }
   }, [error]);
 
@@ -79,7 +79,6 @@ export default function Signin() {
 
         {error && <span className='form__error-msg'>{error}</span>}
 
-        <hr/>
       </form>
       <section className = 'log-sig-load'>
         <p>Si ya tienes cuenta</p>

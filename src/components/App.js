@@ -1,7 +1,8 @@
 // Imports
-import '../styles/App.css';
+import '../styles/LogSig.css';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import greeni from '../assets/images/greeni.png';
 
 // entrada App
 export default function App() {
@@ -15,8 +16,9 @@ export default function App() {
   };
 
   return (
-    <div>
-      <p>INICIO APLICACION</p>
+    <div className='app'>
+      <img className='logo' src={ greeni } alt='greeni-logo'/>
+      <p>¿Quieres conocer si eres un consumidor responsable? </p>
       <button type='button' onClick={handleChangeUrl}>Continuar</button>
     </div>
   )
