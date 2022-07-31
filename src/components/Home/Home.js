@@ -1,7 +1,8 @@
 import NavBar from '../Shared/NavBar'
 import Banner from './Banner'
+import greeni from '../../assets/images/greeni.png';
 import { useNavigate } from 'react-router-dom';
-
+import '../../styles/Home.css'
 export default function Home() {
 
   const navigate = useNavigate();
@@ -14,7 +15,10 @@ export default function Home() {
     <>
       <NavBar/>
       <Banner/>
-      <button onClick={handleChangeUrl}>Poll</button>
+      <div className='conten'>
+      <button className='poll' onClick={handleChangeUrl}>¿Quieres saber que tipo de consumidor eres?</button>
+      <img className='form__logo' src={ greeni } alt='greeni-logo'/>  
+      </div>
     </>
   )
 }
