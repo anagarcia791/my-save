@@ -1,0 +1,33 @@
+.poll {
+  padding: 6px 11px 6px 11px;
+  border-radius: 7px;
+  color: #FFF5F5;
+  background-color: #A83979;
+  border: none;
+  margin: 20px;
+  padding: 20px;
+}
+
+.img__result{
+  width: 200px;;
+}
+
+.infoUsuario{
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.info__user{
+  margin: 10px;
+  font-size: 20px;
+}
+
+.tipo__consumer{
+  margin: 30px;
+  font-size: 20px;
+  color:#A83979;
+  font-weight: bold;
+}
