@@ -48,7 +48,7 @@ export default function Poll() {
       setResult(true);
       let typeFirebase;
       if(countGoodAction >= 8){
-        typeFirebase =  "Eres un Idolo del Ambiente";
+        typeFirebase =  "Idolo del Ambiente";
       }else if(countGoodAction > 4 && countGoodAction < 8){
         typeFirebase =  "Responsable del Ambiente";
       }else if(countGoodAction <= 4){
@@ -69,7 +69,8 @@ export default function Poll() {
 
   const Results = ({resPhoto}) => (
     <>
-      <h1 className="Resuls">
+    <div className="results">
+      <h1 className="text__results">
         {
           countGoodAction >= 8 ?
             "Eres un Idolo del Ambiente" : null
@@ -82,9 +83,11 @@ export default function Poll() {
           countGoodAction <= 4 ?
             "Traidor del Ambiente" : null
         }
-      </h1>
-      <img className='general-nav-img' src={resPhoto} alt='hoja'/>
-      <button onClick={handleChangeUrl}>Ir a Perfil</button>
+      </h1>      
+      <img className='img__results' src={resPhoto} alt='idolotraidor'/>
+      <button  className="button__results" onClick={handleChangeUrl}>Ir a mi Perfil</button>
+    </div>
+      
     </>
   )
 
@@ -115,7 +118,7 @@ export default function Poll() {
           </>
         )
         : (
-          <h1>Cargando</h1>
+          <h1 className="loading">Cargando</h1>
         )
     }
 
