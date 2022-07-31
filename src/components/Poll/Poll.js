@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react"
-import { questionPetition } from "../../Api/PollPetition"
+import '../../styles/Poll.css'
 
 export default function Poll() {
   const [countQuestion, setCountQuestion] = useState(1);
@@ -44,9 +44,9 @@ export default function Poll() {
     }
   }
 
-  const Results = () => (
+  const Results = () => (    
     <>
-      <h1>
+      <h1 className="Resuls">
         {
           countGoodAction > 8 ?
             "Eres un Idolo del Ambiente" : null
@@ -65,18 +65,19 @@ export default function Poll() {
 
   return (
 
-    <div>{result ? <Results /> :
+    <div className="allQuestions">{result ? <Results /> :
 
       currentQuestion ?
         (
           <>
-            <span>Contador de buenas acciones {countGoodAction}</span>
-            <h1>{currentQuestion.question}</h1>
-            <button onClick={() => questionAnswered(true)}>Si</button>
-            <br />
-            <br />
-            <button onClick={() => questionAnswered(false)}>No</button>
-
+            {/* <span>Contador de buenas acciones {countGoodAction}</span> */}
+            <div className="questions">
+            <p>{currentQuestion.question}</p>
+            </div>
+            <div className="buttons__answers">
+            <button className="buttons__answers--si" onClick={() => questionAnswered(true)}>Si</button>                      
+            <button className="buttons__answers--no" onClick={() => questionAnswered(false)}>No</button>
+            </div>
           </>
         )
         : (
