@@ -19,6 +19,7 @@ export default function NavBar() {
         />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='general-nav-dir'>
+            <Link to='/home'>Home</Link>
             <Link to='/profile'>Perfil</Link>
             <button type='button' onClick={handleLogout}>Salir</button>
           </Nav>

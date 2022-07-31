@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth }from 'firebase/auth';
-import { getFirestore, addDoc, collection} from "firebase/firestore";
+import { getFirestore, addDoc, collection, doc, getDoc, getDocs, onSnapshot} from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,8 +22,24 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+const typeConsumer = collection(db, 'type-consumer');
 
 // CREATE
 export const saveTypeConsumer = (uid, type) => {
-  addDoc(collection(db, 'type-consumer'), { uid, type })
+  addDoc(typeConsumer, { uid, type })
 }
+
+export const getTypes = () => {
+  getDocs(typeConsumer);
+};
+
+export const getAllTypes = (querySnapshot) => {
+  onSnapshot( typeConsumer, querySnapshot);
+};
+
+// funcion para acceder a una publicación
+export const getType = (uid) => {
+  const docRef = doc(typeConsumer, uid);
+  const docSnap = getDoc(docRef);
+  return docSnap;
+};
