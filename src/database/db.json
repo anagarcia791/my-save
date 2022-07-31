@@ -1,0 +1,54 @@
+{
+    "questions": [
+        {
+            "id": 1,
+            "question": "¿Tus duchas tardan más de 5 minutos?",
+            "respuesta": 0
+        },
+        {
+            "id": 2,
+            "question": "¿Usas bolsas de tela cuando vas a hacer compras?",
+            "respuesta": 0
+        },
+        {
+            "id": 3,
+            "question": "¿Compras frutas y verduras de temporada?",
+            "respuesta": 0
+        },
+        {
+            "id": 4,
+            "question": "¿Usas bombillas de consumo de baja energía?",
+            "respuesta": 0
+        },
+        {
+            "id": 5,
+            "question": "¿Cuando compras tus alimentos escoges alimentos locales?",
+            "respuesta": 0
+        },
+        {
+            "id": 6,
+            "question": "¿Separas tus residuos?",
+            "respuesta": 0
+        },
+        {
+            "id": 7,
+            "question": "¿Compras comida orgánica?",
+            "respuesta": 0
+        },
+        {
+            "id": 8,
+            "question": "¿Utilizas la bici o caminas cuando vas a lugares cercanos?",
+            "respuesta": 0
+        },
+        {
+            "id": 9,
+            "question": "¿Cierras el grifo mientras te cepillas los dientes?",
+            "respuesta": 0
+        },
+        {
+            "id": 10,
+            "question": "¿Tienes baños ahorradores en casa?",
+            "respuesta": 0
+        }
+    ]
+}
