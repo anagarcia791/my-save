@@ -1,0 +1,8 @@
+.contenedor{
+    margin-top:4px ;
+}
+.contenedor p {
+    color: whitesmoke;
+    font-size: 13px;
+    background:rgba(0, 0, 0, 0.43) ;
+}

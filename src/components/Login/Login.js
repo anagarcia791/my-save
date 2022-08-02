@@ -1,10 +1,13 @@
 // Imports
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../Context/authContext';
 import greeni from '../../assets/images/greeni.png';
 
 // vista login
 export default function Login() {
+
+  const {login} = useAuth();
 
   // navigate para cambio de ruta
   const navigate = useNavigate();
@@ -21,13 +24,21 @@ export default function Login() {
   // funcion para captura de cambio en inputs
   const handleChange = ({target: {name, value}}) => {
     setUser({...user, [name]:value})
-  }
+  };
 
   // funcion para iniciar sesión
-  const handleLogin = (e)=>{
+  const handleLogin = async(e)=>{
     e.preventDefault();
-    console.log(user);
-    navigate('/home', { replace: true });
+    try{
+      await login(user.email, user.password);
+      navigate('/home', { replace: true })
+    }catch(error){
+      if (error.code === 'auth/user-not-found'){
+        setError('Usuario no registrado');
+      }else{
+        setError('Error al iniciar sesión');
+      }
+    }
   }
 
   // hook para cambio en mensaje de error
@@ -35,10 +46,9 @@ export default function Login() {
     if (error) {
       setTimeout(() => {
         setError('');
-      }, 1500);
+      }, 2000);
     }
   }, [error]);
-
   
   // función cambio de ruta a registro
   const handleChangeUrl = () => {
@@ -69,7 +79,6 @@ export default function Login() {
 
         {error && <span className='form__error-msg'>{error}</span>}
 
-        <hr/>
       </form>
       <section className = 'log-sig-load'>
         <p>¿No tienes cuenta?</p>

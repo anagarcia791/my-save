@@ -1,0 +1,36 @@
+.general-nav{
+    background-color: #ffffff;
+    display: flex;
+    align-items:flex-start;
+    padding: 10px 6px 0 6px;
+    max-height: 25vh;
+    width: 100vw;
+}
+.general-nav-img{
+    height: 45px;
+    width: 50px;
+}
+.general-nav-toggle{
+    width: 50px;
+    font-size: 15px;
+}
+.general-nav-dir{
+    text-align: end;
+}
+.general-nav-dir a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.general-nav-dir a:hover{
+    color: #A83979;
+}
+.general-nav-dir button{
+    border: none;
+    background-color: transparent;
+    text-align: end;
+    font-weight: bold;
+}
+.general-nav-dir button:hover{
+    color: #A83979;
+}

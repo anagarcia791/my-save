@@ -1,0 +1,17 @@
+.conten{
+  background-color: #ffffff;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    min-height: 80vh;
+    
+}
+.poll {
+  padding: 6px 11px 6px 11px;
+  border-radius: 7px;
+  color: #FFF5F5;
+  background-color: #A83979;
+  border: none;
+  margin: 20px;
+  padding: 20px;
+}
